@@ -10,7 +10,10 @@
 // Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
 
 function codificar(){
-    console.log("Codificou :)");
+    let campo = document.getElementById("campo");
+    let texto = campo.value;
+
+    console.log(texto)
 }
 
 function decodificar(){
