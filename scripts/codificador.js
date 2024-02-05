@@ -25,37 +25,56 @@ let campo = document.getElementById("campo");
 function codificar(){
     let campo = document.getElementById("campo");
 
-    let texto = campo.value;
-
-    const keys = map.keys();
-    const values = map.values();
-
-    for (let i = 0; i < map.size; i++) {
-        let key = keys.next().value;
-        let value = values.next().value;
-
-        texto = texto.replaceAll(key, value);
-    }
-
+    let texto = campo.value.trim();
     campo.value = texto;
+
+    console.log(texto);
+    console.log(isStringValid(texto));
+
+    if(texto != ""){
+        const keys = map.keys();
+        const values = map.values();
+
+        for (let i = 0; i < map.size; i++) {
+            let key = keys.next().value;
+            let value = values.next().value;
+
+            texto = texto.replaceAll(key, value);
+        }
+
+        // campo.value = texto;
+        document.getElementById("output").innerHTML = texto;
+    }
+    
 }
 
 function decodificar(){
     let campo = document.getElementById("campo");
-
-    let texto = campo.value;
-
-    const keys = map.keys();
-    const values = map.values();
-
-    for(let i = 0; i < map.size; i++){
-
-        let key = keys.next().value;
-        let value = values.next().value;
-
-        texto = texto.replaceAll(value, key);
-
-    }
+    
+    let texto = campo.value.trim();
     campo.value = texto;
 
+    if(texto != ""){
+        const keys = map.keys();
+        const values = map.values();
+
+        for(let i = 0; i < map.size; i++){
+
+            let key = keys.next().value;
+            let value = values.next().value;
+
+            texto = texto.replaceAll(value, key);
+
+        }
+        // campo.value = texto;
+        document.getElementById("output").innerHTML = texto;
+        console.log(campo.value)
+    }
+    
+}
+
+function isStringValid(string){
+    const regex1 = /^[a-z ]+$/; 
+
+    return regex1.test(string);
 }
