@@ -5,9 +5,9 @@
 // A letra "u" é convertida para "ufat"
 
 //Requisitos:
-// Deve funcionar apenas com letras minúsculas
-// Não devem ser utilizados letras com acentos nem caracteres especiais
-// Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
+// Deve funcionar apenas com letras minúsculas ok
+// Não devem ser utilizados letras com acentos nem caracteres especiais ok
+// Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original. ok
 
 // "pairaibenterns poberr enterncairair enterssenter dentersaifimesober enter tenterr fimesnailimeszaidober enterlenter coberm sufatcenterssober!"
 // "parabens por encarar esse desafio e ter finalizado ele com sucesso!"
