@@ -26,19 +26,18 @@ function codificar(){
     let campo = document.getElementById("campo");
 
     let texto = campo.value;
-    actual = "";
 
-    for (let i = 0; i < texto.length; i++) {
+    const keys = map.keys();
+    const values = map.values();
 
-        if(map.get(texto[i]) != undefined){
-            actual += map.get(texto[i]);
-        }
-        else{
-            actual += texto[i];
-        }
+    for (let i = 0; i < map.size; i++) {
+        let key = keys.next().value;
+        let value = values.next().value;
+
+        texto = texto.replaceAll(key, value);
     }
 
-    campo.value = actual;
+    campo.value = texto;
 }
 
 function decodificar(){
@@ -50,7 +49,7 @@ function decodificar(){
     const values = map.values();
 
     for(let i = 0; i < map.size; i++){
-        
+
         let key = keys.next().value;
         let value = values.next().value;
 
@@ -58,4 +57,5 @@ function decodificar(){
 
     }
     campo.value = texto;
+
 }
