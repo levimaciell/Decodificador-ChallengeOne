@@ -25,6 +25,7 @@ let campo = document.getElementById("campo");
 function codificar(){
     let campo = document.getElementById("campo");
     let campoErro = document.getElementById("error__message");
+    let campoOutput = document.getElementById("output");
 
     let texto = campo.value.trim();
     campo.value = texto;
@@ -34,15 +35,18 @@ function codificar(){
         let message = "Você deve digitar algo para criptografar!";
         campoErro.innerHTML = message;
         campoErro.style.display = "block";
+        campoOutput.style.display = "none";
     }
     //text is not only lowercase
     else if(!isStringValid(texto)){
         let message = "Verifique se o texto é somente minúsculo";
         campoErro.innerHTML = message;
         campoErro.style.display = "block";
+        campoOutput.style.display = "none";
     }
     else{
         campoErro.style.display = "none";
+        campoOutput.style.display = "block";
 
         const keys = map.keys();
         const values = map.values();
@@ -54,18 +58,38 @@ function codificar(){
             texto = texto.replaceAll(key, value);
         }
 
-        document.getElementById("output").innerHTML = texto;
+        campoOutput.innerHTML = texto;
     }
     
 }
 
 function decodificar(){
     let campo = document.getElementById("campo");
+    let campoErro = document.getElementById("error__message");
+    let campoOutput = document.getElementById("output");
+
     
     let texto = campo.value.trim();
     campo.value = texto;
 
-    if(texto != ""){
+    //text is blank
+    if(texto == ""){
+        let message = "Você deve digitar algo para descriptografar!";
+        campoErro.innerHTML = message;
+        campoErro.style.display = "block";
+        campoOutput.style.display = "none";
+    }
+    else if(!isStringValid(texto)){
+        let message = "Verifique se o texto é somente minúsculo";
+        campoErro.innerHTML = message;
+        campoErro.style.display = "block";
+        campoOutput.style.display = "none";
+    }
+
+    else{
+        campoErro.style.display = "none";
+        campoOutput.style.display = "block";
+
         const keys = map.keys();
         const values = map.values();
 
@@ -77,8 +101,7 @@ function decodificar(){
             texto = texto.replaceAll(value, key);
 
         }
-        // campo.value = texto;
-        document.getElementById("output").innerHTML = texto;
+        campoOutput.innerHTML = texto;
         console.log(campo.value)
     }
     
