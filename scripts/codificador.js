@@ -24,14 +24,26 @@ let campo = document.getElementById("campo");
 
 function codificar(){
     let campo = document.getElementById("campo");
+    let campoErro = document.getElementById("error__message");
 
     let texto = campo.value.trim();
     campo.value = texto;
 
-    console.log(texto);
-    console.log(isStringValid(texto));
+    //text is blank
+    if(texto == ""){
+        let message = "Você deve digitar algo para criptografar!";
+        campoErro.innerHTML = message;
+        campoErro.style.display = "block";
+    }
+    //text is not only lowercase
+    else if(!isStringValid(texto)){
+        let message = "Verifique se o texto é somente minúsculo";
+        campoErro.innerHTML = message;
+        campoErro.style.display = "block";
+    }
+    else{
+        campoErro.style.display = "none";
 
-    if(texto != ""){
         const keys = map.keys();
         const values = map.values();
 
@@ -42,7 +54,6 @@ function codificar(){
             texto = texto.replaceAll(key, value);
         }
 
-        // campo.value = texto;
         document.getElementById("output").innerHTML = texto;
     }
     
