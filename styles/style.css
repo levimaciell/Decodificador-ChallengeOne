@@ -99,4 +99,10 @@ body{
     border-color: var(--cor-texto);
     border-radius: 0.85rem;
     outline: none;
+    display: none;
+}
+
+#morpheus__img{
+    width: 300px;
+    /* Você pode escolher a pílula azul e nunca saber como seu texto seria encriptado, ou pode tomar a vermelha e descobrir. Em outras palavras, digite seu texto */
 }
