@@ -107,6 +107,10 @@ function decodificar(){
     
 }
 
+function copiarTexto(){
+    console.log("copiou =)");
+}
+
 function isStringValid(string){
     const regex1 = /^[a-z ]+$/; 
 

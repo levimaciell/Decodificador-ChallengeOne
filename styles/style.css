@@ -78,17 +78,25 @@ body{
     font-family: var(--fonte);
     color: red;
 }
-.conteudo__output{
-    background-color: var(--cor-fundo);
-    font-family: var(--fonte);
-    color: var(--cor-texto);
-    border-color: var(--cor-texto);
-    border-style: solid;
-    border-radius: 0.85rem;
-    height: 80vh;
-    width: 25vw;
 
-    padding: 0.5rem 0.5rem;
+.conteudo__output{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
+.conteudo__output__campo{
+    height: 80vh;
+    width: 25vw;
+    padding: 0.5rem 0.5rem;
 
+    font-family: var(--fonte);
+    font-size: 2rem;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: 0.188rem;
+    border-style: solid;
+    border-color: var(--cor-texto);
+    border-radius: 0.85rem;
+    outline: none;
+}
