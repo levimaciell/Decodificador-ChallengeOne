@@ -8,17 +8,23 @@
     <script src="scripts/codificador.js"></script>
 </head>
 <body>
-    <main>
-        <textarea placeholder="Digite seu texto" id="campo"></textarea>
-        <button onclick="codificar()">Codificar</button>
-        <button onclick="decodificar()">Decodificar</button>
-        <p id="error__message"></p>
-        <section>
+    <main class="conteudo">
+
+        <section class="conteudo__input">
+            <textarea placeholder="Digite seu texto" id="campo"></textarea>
+            <p id="error__message"></p>
+            <div class="conteudo__input__botoes">
+                <button onclick="codificar()">Codificar</button>
+                <button onclick="decodificar()">Decodificar</button>
+            </div>
+        </section>
+        
+        <section class="conteudo__output">
             <p id="output">Nenhuma mensagem Encontrada =(</p>
         </section>
     </main>
-    <footer>
+    <!-- <footer>
         <p>Made by Maciel enterprises</p>
-    </footer>
+    </footer> -->
 </body>
 </html>
