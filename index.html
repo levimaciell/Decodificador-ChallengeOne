@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +11,11 @@
     <main class="conteudo">
 
         <section class="conteudo__input">
-            <textarea placeholder="Digite seu texto" id="campo"></textarea>
+            <textarea placeholder="Digite seu texto" id="campo" class="conteudo__input__campo"></textarea>
             <p id="error__message"></p>
             <div class="conteudo__input__botoes">
-                <button onclick="codificar()">Codificar</button>
-                <button onclick="decodificar()">Decodificar</button>
+                <button onclick="codificar()" class="conteudo__input__botoes__botao">Codificar</button>
+                <button onclick="decodificar()" class="conteudo__input__botoes__botao">Decodificar</button>
             </div>
         </section>
         
@@ -23,8 +23,8 @@
             <p id="output">Nenhuma mensagem Encontrada =(</p>
         </section>
     </main>
-    <!-- <footer>
+    <footer>
         <p>Made by Maciel enterprises</p>
-    </footer> -->
+    </footer>
 </body>
 </html>
