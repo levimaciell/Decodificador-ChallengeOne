@@ -4,7 +4,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 :root{
     --cor-texto: #76FF6F;
@@ -16,8 +15,8 @@
     background-color: var(--cor-texto);
 }
 body{
-    height: 100vh;
     background-color: var(--cor-fundo);
+    box-sizing: border-box;
 }
 
 .conteudo{
@@ -55,10 +54,8 @@ body{
 
 .conteudo__input__campo{
     resize: none;
-    height: 80vh;
-    width: 50vw;
+    /* height: 80vh; */
     padding: 0.5rem 0.5rem;
-
     font-family: var(--fonte);
     font-size: 2rem;
     background-color: var(--cor-fundo);
