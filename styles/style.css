@@ -83,13 +83,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    border-style: solid;
-    border-color: var(--cor-texto);
-    border-radius: 0.85rem;
-}
-
-.after__click{
-    display: none;
 }
 
 .conteudo__output__campo{
@@ -106,6 +99,7 @@ body{
     border-color: var(--cor-texto);
     border-radius: 0.85rem;
     outline: none;
+    display: none;
 }
 
 #morpheus__img{
