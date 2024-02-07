@@ -108,10 +108,7 @@ function decodificar(){
 }
 
 function copiarTexto(){
-    const element = document.getElementById("output");
-    element.select();
-    element.setSelectionRange(0,99999);
-    navigator.clipboard.writeText(element.innerHTML);
+    console.log("copiou =)");
 }
 
 function isStringValid(string){
