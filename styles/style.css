@@ -23,16 +23,16 @@ body{
 .conteudo{
     display: flex;
     justify-content: center;
-    /* gap: 8rem; */
+    gap: 8%;
     padding: 3% 0;
 }
 
 .conteudo__input{
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    width: 35%;
-    height: 75vh;    
+    gap: 2%;
+    width: 45%;
+    height: 80vh;    
 }
 
 .conteudo__input__campo{
@@ -84,15 +84,15 @@ body{
 .conteudo__output{
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    display: none;
+    width: 23%;
+    height: 80vh;    
+    gap: 2%;
 }
 
 .conteudo__output__campo{
-    height: 80vh;
-    width: 25vw;
-    padding: 0.5rem 0.5rem;
-
+    resize: none;
+    height: 100%;
+    padding: 2%;
     font-family: var(--fonte);
     font-size: 2rem;
     background-color: var(--cor-fundo);
@@ -104,7 +104,23 @@ body{
     outline: none;
 }
 
-#morpheus__img{
-    width: 300px;
-    /* Você pode escolher a pílula azul e nunca saber como seu texto seria encriptado, ou pode tomar a vermelha e descobrir. Em outras palavras, digite seu texto */
+.conteudo__output__botoes{
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo__output__botoes__botao{
+    padding: 1.5% 4%;
+    border-style: solid;
+    border-color: var(--cor-texto);
+    border-radius: 5rem;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte);
+    font-weight: 600;
+}
+
+.conteudo__output__botoes__botao:hover{
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
 }
