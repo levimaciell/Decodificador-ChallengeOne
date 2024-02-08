@@ -80,6 +80,7 @@ body{
 .conteudo__input__botoes__botao:hover{
     color: var(--cor-fundo);
     background-color: var(--cor-texto);
+    cursor: pointer;
 }
 
 #error__message{
