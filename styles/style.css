@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
 }
+
 :root{
     --cor-texto: #76FF6F;
     --cor-fundo: #000000;
@@ -14,6 +14,7 @@
     color: var(--cor-fundo);
     background-color: var(--cor-texto);
 }
+
 body{
     background-color: var(--cor-fundo);
     box-sizing: border-box;
@@ -22,40 +23,22 @@ body{
 .conteudo{
     display: flex;
     justify-content: center;
-    gap: 8rem;
-    padding: 2.5rem 0;
+    /* gap: 8rem; */
+    padding: 3% 0;
 }
 
 .conteudo__input{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-}
-
-.conteudo__input__botoes{
-    display: flex;
-    justify-content: space-around;
-}
-.conteudo__input__botoes__botao{
-    padding: 0.8rem 2.5rem;
-    border-style: solid;
-    border-color: var(--cor-texto);
-    border-radius: 5rem;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: var(--fonte);
-    font-weight: 600;
-}
-
-.conteudo__input__botoes__botao:hover{
-    color: var(--cor-fundo);
-    background-color: var(--cor-texto);
+    width: 35%;
+    height: 75vh;    
 }
 
 .conteudo__input__campo{
     resize: none;
-    /* height: 80vh; */
-    padding: 0.5rem 0.5rem;
+    height: 100%;
+    padding: 2%;
     font-family: var(--fonte);
     font-size: 2rem;
     background-color: var(--cor-fundo);
@@ -71,15 +54,38 @@ body{
     color: var(--cor-texto);
 }
 
+.conteudo__input__botoes{
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteudo__input__botoes__botao{
+    padding: 1.5% 4%;
+    border-style: solid;
+    border-color: var(--cor-texto);
+    border-radius: 5rem;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte);
+    font-weight: 600;
+}
+
+.conteudo__input__botoes__botao:hover{
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+}
+
 #error__message{
     font-family: var(--fonte);
     color: red;
 }
 
+/*OUTPUT*/
 .conteudo__output{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    display: none;
 }
 
 .conteudo__output__campo{
@@ -96,7 +102,6 @@ body{
     border-color: var(--cor-texto);
     border-radius: 0.85rem;
     outline: none;
-    display: none;
 }
 
 #morpheus__img{
