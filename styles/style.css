@@ -111,7 +111,6 @@ body{
 .conteudo__output{
     width: 23%;
     height: 70vh; 
-    background-color: var(--cor-fundo);   
 }
 
 .conteudo__output__apresentacao{
