@@ -53,7 +53,7 @@ body{
     flex-direction: column;
     gap: 2%;
     width: 40%;
-    height: 65vh;    
+    height: 75vh;    
 }
 
 .conteudo__input__campo{
@@ -102,6 +102,9 @@ body{
     font-family: var(--fonte);
     color: red;
     display: none;
+    background-color: var(--cor-fundo);
+    border-radius: 2rem;
+
 }
 
 /*OUTPUT*/
@@ -207,4 +210,80 @@ body{
     display: flex;
     width: 7%;
     justify-content: space-between;
+}
+
+@media(max-width:1100px){
+    .conteudo{
+        flex-direction: column;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .conteudo__input{
+        height: 50vh;
+        width: 80%;
+    }
+    #error__message{
+        font-size: 1.7rem;
+        background-color: var(--cor-fundo);
+    }
+    .conteudo__input__botoes__botao{
+        font-size: 1.7rem;
+    }
+
+    .conteudo__output{
+        height: 30vh;
+        width: 80%;
+        /* display: none; */
+    }
+
+    .conteudo__output__apresentacao img{
+        display: none;
+    }
+
+    .conteudo__output__apresentacao__texto{
+        font-size: 1.7rem;
+    }
+
+    .rodape__texto{
+        font-size: 1.7rem;
+    }
+}
+
+@media(max-width:500px){
+    .conteudo{
+        flex-direction: column;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .conteudo__input{
+        height: 40vh;
+        width: 80%;
+    }
+    #error__message{
+        font-size: 1.5rem;
+        background-color: var(--cor-fundo);
+    }
+    .conteudo__input__botoes__botao{
+        font-size: 1.5rem;
+    }
+
+    .conteudo__output{
+        height: 30vh;
+        width: 80%;
+        /* display: none; */
+    }
+
+    .conteudo__output__apresentacao img{
+        display: none;
+    }
+
+    .conteudo__output__apresentacao__texto{
+        font-size: 1.5rem;
+    }
+
+    .rodape__texto{
+        font-size: 1.5rem;
+    }
 }
