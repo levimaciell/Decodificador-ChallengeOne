@@ -123,6 +123,7 @@ body{
     border-style: solid;
     border-color: var(--cor-texto);
     border-radius: 0.85rem;
+    background-color: var(--cor-fundo);
 }
 .conteudo__output__apresentacao__texto{
     padding: 3%;
